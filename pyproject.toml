@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "pillow>=12.1.0",
     "py2app>=0.28.9",
     "pyinstaller>=6.18.0",
     "pyobjc-framework-quartz>=12.1",

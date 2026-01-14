@@ -7,9 +7,9 @@
 	<key>CFBundleExecutable</key>
 	<string>Pomodoro</string>
 	<key>CFBundleIconFile</key>
-	<string>icon-windowed.icns</string>
+	<string>Pomodoro.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>Pomodoro</string>
+	<string>com.saurabhmisra.pomodoro</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

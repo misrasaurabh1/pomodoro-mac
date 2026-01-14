@@ -45,6 +45,6 @@ coll = COLLECT(
 app = BUNDLE(
     coll,
     name='Pomodoro.app',
-    icon=None,
-    bundle_identifier=None,
+    icon='Pomodoro.icns',
+    bundle_identifier='com.saurabhmisra.pomodoro',
 )

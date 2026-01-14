@@ -4,13 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Resources/Pomodoro.icns</key>
+		<data>
+		KxEGEXvf2SUYW0tj7n3yYipPZnE=
+		</data>
 		<key>Resources/base_library.zip</key>
 		<data>
-		0IwiucH/8CDDWYFspifcROKBR1M=
-		</data>
-		<key>Resources/icon-windowed.icns</key>
-		<data>
-		eEHOuYpZLB0vKGVIWGZOh5rH8+o=
+		nGcAIn54UkUQF6kRQ/Gb/i1IQ1I=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -648,6 +648,13 @@
 			<key>symlink</key>
 			<string>../Frameworks/Foundation</string>
 		</dict>
+		<key>Resources/Pomodoro.icns</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Yvzs2DOr7cSvWOBoxVGrjyTQf3p9hkHfzaBZHhVp8+M=
+			</data>
+		</dict>
 		<key>Resources/Python</key>
 		<dict>
 			<key>symlink</key>
@@ -667,14 +674,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rJLkWOMfnCabHXabX4nGFLdbQWJjwcCQqg9bq/J3Qyw=
-			</data>
-		</dict>
-		<key>Resources/icon-windowed.icns</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			uQo7VuWRab4Phv4EEGmfQsyqFqDIXZgO8OtgaAMvCzY=
+			GC+W+4HsBWA2l4FntS5UonS2zVFCJhY3q6GtfieNvqM=
 			</data>
 		</dict>
 		<key>Resources/libcrypto.3.dylib</key>

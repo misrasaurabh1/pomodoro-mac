@@ -10,3 +10,6 @@ wheels/
 
 # macOS
 .DS_Store
+
+# IDE
+.idea/
