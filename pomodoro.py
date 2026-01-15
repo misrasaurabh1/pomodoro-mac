@@ -17,7 +17,7 @@ from Quartz.CoreGraphics import CGEventSourceSecondsSinceLastEventType, kCGEvent
 
 
 APP_NAME = "Pomodoro"
-APP_VERSION = "1.0.0"
+APP_VERSION = "1.1.0"
 APP_AUTHOR = "Saurabh Misra"
 BUNDLE_ID = "com.saurabhmisra.pomodoro"
 
@@ -210,18 +210,22 @@ class PomodoroApp(rumps.App):
         """Update menu items based on current state."""
         if self.state == TimerState.IDLE:
             self.start_button.set_callback(self.start_focus)
+            self.skip_button.title = "Skip to Rest"
             self.skip_button.set_callback(None)
             self.stop_button.set_callback(None)
         elif self.state == TimerState.FOCUS:
             self.start_button.set_callback(None)
+            self.skip_button.title = "Skip to Rest"
             self.skip_button.set_callback(self.skip_to_rest)
             self.stop_button.set_callback(self.stop_timer)
         elif self.state in (TimerState.SHORT_REST, TimerState.LONG_REST):
             self.start_button.set_callback(None)
-            self.skip_button.set_callback(None)
+            self.skip_button.title = "Skip to Focus"
+            self.skip_button.set_callback(self.skip_to_focus)
             self.stop_button.set_callback(self.stop_timer)
         elif self.state == TimerState.WAITING_FOR_USER:
             self.start_button.set_callback(self.start_focus)
+            self.skip_button.title = "Skip to Rest"
             self.skip_button.set_callback(None)
             self.stop_button.set_callback(self.stop_timer)
 
@@ -284,6 +288,11 @@ class PomodoroApp(rumps.App):
         if self.state == TimerState.FOCUS:
             is_long = (self.completed_sessions + 1) % self.sessions_until_long_rest == 0
             self.start_rest(is_long=is_long)
+
+    def skip_to_focus(self, _=None):
+        """Skip current rest session to focus."""
+        if self.state in (TimerState.SHORT_REST, TimerState.LONG_REST):
+            self.start_focus()
 
     def stop_timer(self, _=None):
         """Stop the timer and return to idle."""
